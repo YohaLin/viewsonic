@@ -2,6 +2,7 @@ import React, { ChangeEvent, useEffect, useState } from "react";
 import Button from "../components/Button";
 import clsx from "clsx";
 import { buttonStyle } from "../styles/buttonStyle";
+import useScreenWidth from "../hooks/useScreenWidth";
 
 const Task1 = () => {
   // toggle state in textarea
@@ -10,13 +11,7 @@ const Task1 = () => {
   const [frameWidth, setFrameWidth] = useState<400 | 800>(400);
   const [textLength, setTextLength] = useState(0)
   const [textareaHeight, setTextareaHeight] = useState("auto");
-
-  // when screen width < 996, change frameWidth to 400, avoid broken layout
-  const handleResize = () => {
-    if (window.innerWidth < 996) {
-      setFrameWidth(400);
-    }
-  }
+  const screenWidth = useScreenWidth()
 
   // get textarea scrollHeight and text length
   const handleTextareaChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
@@ -24,13 +19,12 @@ const Task1 = () => {
     setTextLength(e.target.textLength)
   }
 
+  // when screen width < 996, change frameWidth to 400, avoid broken layout
   useEffect(() => {
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [window.innerWidth]);
+    if (window.innerWidth < 996) {
+      setFrameWidth(400);
+    }
+  }, [screenWidth]);
 
   return (
     <div
@@ -54,14 +48,15 @@ const Task1 = () => {
       <div className="flex flex-col gap-4 w-fit h-fit">
         <Button
           style="w-fit h-12 px-4 py-2 rounded-lg"
-          text={isEditable ? "make not edit" : "edit"}
+          text={isEditable ? "disable edit" : "edit"}
           onClick={() => setIsEditable(!isEditable)}
         />
         <Button
           style="w-fit min-w-[150px] h-12 p-2 rounded-lg"
           text={`resize to ${frameWidth === 400 ? 800 : 400}px`}
+          disabled={frameWidth === 400 && screenWidth < 996}
           onClick={() =>
-            frameWidth === 400 ? setFrameWidth(800) : setFrameWidth(400)
+            frameWidth === 400 && screenWidth > 996 ? setFrameWidth(800) : setFrameWidth(400)
           }
         />
       </div>

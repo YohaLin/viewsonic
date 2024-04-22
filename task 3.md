@@ -32,7 +32,7 @@ function function2(ctrl) {
 }
 ```
 
-1. 可以在請求 try 區塊中加入 while(true) ，持續呼叫 API，直到程式中斷或是特定條件被滿足。
+2. 可以在請求 try 區塊中加入 while(true) ，持續呼叫 API，直到程式中斷或是特定條件被滿足。
 https://redux-saga-in-chinese.js.org/docs/advanced/NonBlockingCalls.html
 
 ```jsx
@@ -49,7 +49,7 @@ function* function1(action) {
 }
 ```
 
-1. 可以利用 Redux Saga 提供的 cancelled() 來檢查請求是否取消，最後在 finally 區塊中專門處理請求被取消的狀況。
+3. 可以利用 Redux Saga 提供的 cancelled() 來檢查請求是否取消，最後在 finally 區塊中專門處理請求被取消的狀況。
 [https://pjchender.dev/react/redux-saga/#使用-finally-和-cancelled-來處理被停止的-task](https://pjchender.dev/react/redux-saga/#%E4%BD%BF%E7%94%A8-finally-%E5%92%8C-cancelled-%E4%BE%86%E8%99%95%E7%90%86%E8%A2%AB%E5%81%9C%E6%AD%A2%E7%9A%84-task)
 
 ```jsx

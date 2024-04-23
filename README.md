@@ -1,5 +1,5 @@
 ### **1. Task1**
-
+![image](./src/assets/task1.gif)
 This is a textarea.
 
 **Edit Button**
@@ -18,7 +18,7 @@ This is a textarea.
 - The textarea has a default height, and if the text exceeds this height, it will automatically extend.
 
 ### **2. Task2**
-
+![image](./src/assets/task2.gif)
 This is a timer with Responsive Web Design (RWD), including three different buttons below.
 
 **Start Button**

@@ -1,38 +1,40 @@
-### 1. Task1
+### **1. Task1**
 
-Edit 按鈕
+This is a textarea.
 
-- 使用者可以點擊”disable edit” 按鈕，讓 textarea 不能被編輯；點擊”edit”，可以讓 textarea 被編輯。
+**Edit Button**
 
-Resize 按鈕
+- Users can click the "disable edit" button to make the textarea non-editable; clicking "edit" will make the textarea editable again.
 
-- 使用者可以點擊 resize 按鈕將 outer frame 的寬度在 400px, 800px 之間切換。
-- 若螢幕寬度小於 996 px 且 outer frame 為 800 px，會自動將寬度切成 400px。
-- 若螢幕寬度小於 996 px，resize 按鈕會被 disabled。
+**Resize Button**
 
-Textarea
+- Users can click the resize button to toggle the outer frame's width between 400px and 800px.
+- If the screen width is less than 997 px and the outer frame is 800 px, the outer frame will automatically be reduced to 400px.
+- If the screen width is less than 997 px, the resize button will be disabled.
 
-- 使用者在 textarea 輸入文字時，會顯示目前文字數量。
-- textare 有預設的高度，如果文字超過高度，會自動延長。
+**Textarea**
 
-### 2. Task2
+- When users type in the textarea, it will display the current number of characters.
+- The textarea has a default height, and if the text exceeds this height, it will automatically extend.
 
-這是一個計時器，並有 RWD。
+### **2. Task2**
 
-Start 按鈕
+This is a timer with Responsive Web Design (RWD), including three different buttons below.
 
-- 點擊之後會啟動計時器，並顯示目前經過的秒數。
-- 如果已經有秒數進行中，點擊後可以清空並重新開始。
+**Start Button**
 
-Lap 按鈕
+- Clicking it will start the timer and display the current number of seconds passed.
+- If there is already a timer running, clicking it will clear the existing time and restart.
 
-- 點擊之後可以查看目前圈數的秒數。
-- 每一圈的順序會由最新到最舊。
+**Lap Button**
 
-End 按鈕
+- Clicking it will record the current lap time.
+- Each lap's time is listed from the most recent to the oldest.
 
-- 點擊可以暫停目前的計時器。
+**End Button**
 
-### 3. Task3
+- Clicking it will pause the current timer.
 
-請參考 [github task 3.md](https://github.com/YohaLin/viewsonic/blob/main/task%203.md)
+### **3. Task3**
+
+Please refer to [github task 3.md](https://github.com/YohaLin/viewsonic/blob/main/task%203.md)
